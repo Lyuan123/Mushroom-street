@@ -79,7 +79,14 @@ export default {
       //1.获取顶部的轮播数据
       console.log(res.result);
       const data = res.result;
-      this.topImages = data.itemInfo.topImages;
+      let arr =[]
+      let img = data.itemInfo.topImages
+      for(let i=0;i<img.length;i++){
+        arr[i]='http:'+img[i]
+      }
+      let add =arr
+      console.log(add,"asda");
+      this.topImages = add;
       console.log(this.topImages);
 
       //2.获取商品信息
